@@ -9,7 +9,7 @@ As I follow the OSSU curriculum and explore additional resources, I will continu
 <https://github.com/ShadrackAdom/A-Comprehensive-Guide-to-Data-Science/>
 
 ## My Contact
----
+
 Email: shadomdatasci@gmail.com
+
 Linkedin: <https://www.linkedin.com/in/shadrack-adom-592aa1271/>
----
