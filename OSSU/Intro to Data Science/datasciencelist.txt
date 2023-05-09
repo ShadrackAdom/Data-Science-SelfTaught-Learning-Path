@@ -1,0 +1,6 @@
+datasciencelist.txt
+-Hands on Machine Learning with Scikit, Keras and Tensorlow
+-Deep learning of python
+-Python for data analysis 
+-Machine Learning for algorithmic trading
+-
