@@ -25,7 +25,7 @@ for pwr in range(1,6):
 if not found:
     print("No such pair of integers exists.")
 
-###while loop version
+###WHILE LOOP VERSION
 
 # num = int(input("Enter an integer: "))
 # found = False
