@@ -1,6 +1,6 @@
 # Problem Set 2, hangman.py
-# Name: 
-# Collaborators:
+# Name: Shadrack Adom
+# Collaborators: N/A
 # Time spent:
 
 # Hangman Game
@@ -13,6 +13,7 @@ import random
 import string
 
 WORDLIST_FILENAME = "words.txt"
+letters_guessed = []
 
 
 def load_words():
@@ -40,6 +41,7 @@ def choose_word(wordlist):
     
     Returns a word from wordlist at random
     """
+    #print(random.choice(wordlist))
     return random.choice(wordlist)
 
 # end of helper code
@@ -61,19 +63,38 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
 
+    win = True
+    for letter in secret_word:
+        if letter not in letters_guessed:
+            win = False
+    return win
 
+#print(is_word_guessed('apple', ['w','a', 'q', 'p','e', 'i', 'l', 'k', 'p', 'r', 's']))
+                                
+                              
 
 def get_guessed_word(secret_word, letters_guessed):
     '''
-    secret_word: string, the word the user is guessing
+    secret_word: string, the word the user is guessing[]
     letters_guessed: list (of letters), which letters have been guessed so far
     returns: string, comprised of letters, underscores (_), and spaces that represents
       which letters in secret_word have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+    guessed_word = []
+
+    for letter in secret_word:
+        if letter not in letters_guessed:
+            guessed_word.append('_ ')
+        else:
+            guessed_word.append(letter)
+    
+    return ''.join(guessed_word)
+          
+    
+#print(get_guessed_word('apple', ['e', 'i', 'k', 'p', 'r', 's']))
+
 
 
 
@@ -84,7 +105,14 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+    cp_ascii = list(string.ascii_lowercase)
+    for letter in cp_ascii[:]:
+        if letter in letters_guessed:
+            cp_ascii.remove(letter)
+    
+    return ''.join(cp_ascii)
+
+print(get_available_letters(['e', 'i', 'k', 'p', 'r', 's']))
     
     
 
@@ -105,6 +133,7 @@ def hangman(secret_word):
     * Ask the user to supply one guess per round. Remember to make
       sure that the user puts in a letter!
     
+    
     * The user should receive feedback immediately after each guess 
       about whether their guess appears in the computer's word.
 
@@ -114,7 +143,7 @@ def hangman(secret_word):
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE AND DELETE "pass"
-    pass
+
 
 
 
